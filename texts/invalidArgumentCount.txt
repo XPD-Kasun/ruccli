@@ -1,0 +1,25 @@
+Following commands are supported.
+
+{app}(param20)Creates a new uber console app in the current directory
+{config}(param20)Creates only a new module configuration using the provided path.
+
+{app
+----------}(topic)
+Creates a new uber console boilerplate app in the current directory. This command takes following format.
+
+{$ npx create-uber-console app --lang [language] --pkg [packageManager] --use-slim}(cd) or
+{$ npm init uber-console app -- --lang [language] --pkg [packageManager] --use-slim}(cd)
+
+{--lang [-l]}(param20)[Optional] Specifies the language to be used. Value can be either {js}(bold) and {ts}(bold). js creates JavaScript based project and ts creates TypeScript based project. Default is js
+
+{--pkg [-p]}(param20)[Optional] Specifies the package manager to be used for package installation. Value can be either {npm}(bold) or {yarn}(bold). Default is npm.
+
+{--use-slim}(param20)[Optional] --use-slim argument specifies to use light weight boilerplate which doesn't use react-scripts from cra. This only installs essential dependancies. If not specified, project will use react-scripts.
+
+{config
+----------}(topic)
+Starts the command line wizard that will scaffold modules folder that contains a module configuration. If your project has src folder at the root, this will create modules folder at /src/modules. If not, /modules will be created at the root. This will not run if there is a module folder already at those locations to prevent overwrites. Move them them or delete them before running this command.
+
+{$ npx create-uber-console config}(cd) or
+{$ npm init uber-console config}(cd)
+

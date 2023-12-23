@@ -1,0 +1,25 @@
+Following commands are supported.
+
+[93m[1mapp[22m[39m                 Creates a new uber console app in the current directory
+[93m[1mconfig[22m[39m              Creates only a new module configuration using the provided path.
+
+[92m[1mapp[22m[39m
+[92m[1m----------[22m[39m
+Creates a new uber console boilerplate app in the current directory. This command takes following format.
+
+[94m[1m$ npx create-uber-console app --lang [language] --pkg [packageManager] --use-slim[22m[39m or
+[94m[1m$ npm init uber-console app -- --lang [language] --pkg [packageManager] --use-slim[22m[39m
+
+[93m[1m--lang [-l][22m[39m         [Optional] Specifies the language to be used. Value can be either [95m[1mjs[22m[39m and [95m[1mts[22m[39m. js creates JavaScript based project and ts creates TypeScript based project. Default is js
+
+[93m[1m--pkg [-p][22m[39m          [Optional] Specifies the package manager to be used for package installation. Value can be either [95m[1mnpm[22m[39m or [95m[1myarn[22m[39m. Default is npm.
+
+[93m[1m--use-slim[22m[39m          [Optional] --use-slim argument specifies to use light weight boilerplate which doesn't use react-scripts from cra. This only installs essential dependancies. If not specified, project will use react-scripts.
+
+[92m[1mconfig[22m[39m
+[92m[1m----------[22m[39m
+Starts the command line wizard that will scaffold modules folder that contains a module configuration. If your project has src folder at the root, this will create modules folder at /src/modules. If not, /modules will be created at the root. This will not run if there is a module folder already at those locations to prevent overwrites. Move them them or delete them before running this command.
+
+[94m[1m$ npx create-uber-console config[22m[39m or
+[94m[1m$ npm init uber-console config[22m[39m
+
